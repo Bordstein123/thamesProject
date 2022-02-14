@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.hhn.pmt.thames.view.thameswebsite.ThamesMapController">
+    <children>
+        <Label alignment="CENTER" layoutX="221.0" layoutY="21.0" text="Selecting a Point of Interest" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="thamesMap" cache="true" fitHeight="467.0" fitWidth="1189.0" layoutX="10.0" layoutY="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="40.0">
+            <image>
+                <Image url="@map_of_the_thames.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="poiName" alignment="CENTER" layoutY="508.0" prefHeight="17.0" prefWidth="223.0" text="--NAME OF THE SELECTED POINT--" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="508.0">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+        <Label fx:id="openHourLabel" layoutX="20.0" layoutY="548.0" prefHeight="17.0" prefWidth="89.0" text="Opening Hour: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="548.0" />
+        <Label fx:id="closeHourLabel" layoutX="20.0" layoutY="568.0" prefHeight="17.0" prefWidth="89.0" text="Closing Hour:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="568.0" />
+        <Label fx:id="openHourClock" layoutX="110.0" layoutY="548.0" prefHeight="17.0" prefWidth="89.0" text="9:30 pm" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="548.0" />
+        <Label fx:id="closeHourClock" layoutX="110.0" layoutY="568.0" prefHeight="17.0" prefWidth="81.0" text="5:00 am" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="568.0" />
+        <RadioButton fx:id="londonEye" layoutX="307.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#showLondonEye">
+            <toggleGroup>
+                <ToggleGroup fx:id="tgPoi" />
+            </toggleGroup>
+        </RadioButton>
+        <RadioButton fx:id="towerOfLondon" layoutX="540.0" layoutY="120.0" mnemonicParsing="false" onMouseClicked="#showTowerOfLondon" prefHeight="17.0" prefWidth="10.0" toggleGroup="$tgPoi" />
+      <RadioButton fx:id="westminsterAbbey" layoutX="267.0" layoutY="238.0" mnemonicParsing="false" onMouseClicked="#showWestminsterAbbey" toggleGroup="$tgPoi" />
+      <RadioButton fx:id="palmRiverside" layoutX="63.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#showPalmRiverside" toggleGroup="$tgPoi" />
+      <RadioButton fx:id="pizzaExpress" layoutX="467.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#showPizzaExpress" toggleGroup="$tgPoi" />
+      <RadioButton fx:id="theNarrow" layoutX="834.0" layoutY="127.0" mnemonicParsing="false" onMouseClicked="#showTheNarrow" toggleGroup="$tgPoi" />
+      <RadioButton fx:id="nandosGreenwich" layoutX="932.0" layoutY="246.0" mnemonicParsing="false" onMouseClicked="#showNando" toggleGroup="$tgPoi" />
+        <Label fx:id="dayOfRestLabel" layoutX="20.0" layoutY="588.0" text="Day of Rest:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="588.0" />
+        <Label fx:id="dayOfRestValue" layoutX="110.0" layoutY="588.0" prefHeight="17.0" prefWidth="89.0" text="RESTDAYS" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="588.0" />
+        <Label fx:id="homepageLabel" layoutX="20.0" layoutY="608.0" text="Homepage: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="608.0" />
+      <Label fx:id="homepageValue" layoutX="110.0" layoutY="608.0" text="Label" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="608.0" />
+      <Button fx:id="book" layoutX="20.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#openHomepage" prefHeight="25.0" prefWidth="446.0" text="open Homepage" />
+      <Label fx:id="entranceFeeLabel" layoutX="524.0" layoutY="548.0" text="Entrance Fee:" />
+      <Label fx:id="entranceFeeValue" layoutX="620.0" layoutY="548.0" text="29.99€" />
+      <Label fx:id="priceRangeLabel" layoutX="524.0" layoutY="548.0" text="Price Level:" />
+      <Label fx:id="priceRangeValue" layoutX="640.0" layoutY="548.0" text="2" />
+      <Label fx:id="veggieMealsLabel" layoutX="524.0" layoutY="568.0" text="Vegetarian meals" />
+      <Label fx:id="veganMealLabel" layoutX="524.0" layoutY="588.0" text="Vegan meals" />
+      <CheckBox fx:id="veggieChk" disable="true" layoutX="640.0" layoutY="568.0" mnemonicParsing="false" />
+      <CheckBox fx:id="veganChk" disable="true" layoutX="640.0" layoutY="588.0" mnemonicParsing="false" />
+      <Label fx:id="latLabel" layoutX="828.0" layoutY="548.0" text="Latitude:" />
+      <Label fx:id="longitudeLabel" layoutX="827.0" layoutY="568.0" text="Longitude:" />
+      <Label fx:id="latValue" layoutX="918.0" layoutY="548.0" text="LAT VLAUE" />
+      <Label fx:id="longitudeValue" layoutX="919.0" layoutY="568.0" text="LONG VALUE" />
+      <Button fx:id="openStreet" layoutX="830.0" layoutY="646.0" mnemonicParsing="false" onMouseClicked="#showInOpenStreetMap" prefHeight="25.0" prefWidth="357.0" text="show in OpenStreetMap" />
+    </children>
+</AnchorPane>

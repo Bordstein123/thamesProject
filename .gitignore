@@ -1,0 +1,4 @@
+# Project exclude paths
+/thamesGui/.gradle/
+/thamesGui/build/
+/thamesGui/build/classes/java/main/
